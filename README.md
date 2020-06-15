@@ -7,8 +7,8 @@ with Attentional Generative Adversarial Networks](http://openaccess.thecvf.com/c
 This version includes additional FC layer to reduce noise for Noisy Texts
 The idea was got from [A Generative Adversarial Approach for Zero-Shot Learning from Noisy Texts](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf)
 
-Additional FC layer was added to class RNN_ENCODER after embedding layer in model.py
-This layer should improve quality for noisy texts
+An additional FC layer was added to class RNN_ENCODER after embedding layer in model.py. 
+This layer should improve quality for noisy texts. Number of neurons of the additional layer only half the size of input layer. The same way is described in [A Generative Adversarial Approach for Zero-Shot Learning from Noisy Texts](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf)
 
 In the folder Logs you can read logs of training processes DAMSM with and without additional FC layer
 The name of this FC layer is "rdc_text"
