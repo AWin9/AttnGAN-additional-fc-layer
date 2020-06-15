@@ -1,0 +1,96 @@
+/storage/botan/AttnGAN/venv/bin/python /storage/botan/AttnGAN/code/pretrain_DAMSM.py
+/storage/botan/AttnGAN/code/miscc/config.py:103: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  yaml_cfg = edict(yaml.load(f))
+Using config:
+{'B_VALIDATION': False,
+ 'CONFIG_NAME': 'DAMSM',
+ 'CUDA': True,
+ 'DATASET_NAME': 'birds',
+ 'DATA_DIR': '../data/birds',
+ 'GAN': {'B_ATTENTION': True,
+         'B_DCGAN': False,
+         'CONDITION_DIM': 100,
+         'DF_DIM': 64,
+         'GF_DIM': 128,
+         'R_NUM': 2,
+         'Z_DIM': 100},
+ 'GPU_ID': 0,
+ 'RNN_TYPE': 'LSTM',
+ 'TEXT': {'CAPTIONS_PER_IMAGE': 10, 'EMBEDDING_DIM': 256, 'WORDS_NUM': 18},
+ 'TRAIN': {'BATCH_SIZE': 48,
+           'B_NET_D': True,
+           'DISCRIMINATOR_LR': 0.0002,
+           'ENCODER_LR': 0.002,
+           'FLAG': True,
+           'GENERATOR_LR': 0.0002,
+           'MAX_EPOCH': 600,
+           'NET_E': '',
+           'NET_G': '',
+           'RNN_GRAD_CLIP': 0.25,
+           'SMOOTH': {'GAMMA1': 4.0,
+                      'GAMMA2': 5.0,
+                      'GAMMA3': 10.0,
+                      'LAMBDA': 1.0},
+           'SNAPSHOT_INTERVAL': 50},
+ 'TREE': {'BASE_SIZE': 299, 'BRANCH_NUM': 1},
+ 'WORKERS': 1}
+Total filenames:  11788 001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg
+Load filenames from: ../data/birds/train/filenames.pickle (8855)
+Load filenames from: ../data/birds/test/filenames.pickle (2933)
+Load from:  ../data/birds/captions.pickle
+5450 10
+Total filenames:  11788 001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg
+Load filenames from: ../data/birds/train/filenames.pickle (8855)
+Load filenames from: ../data/birds/test/filenames.pickle (2933)
+Load from:  ../data/birds/captions.pickle
+/storage/botan/AttnGAN/venv/lib/python3.7/site-packages/torch/nn/modules/rnn.py:50: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+Load pretrained model from  https://download.pytorch.org/models/inception_v3_google-1a9a5a14.pth
+/storage/botan/AttnGAN/code/pretrain_DAMSM.py:97: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  cfg.TRAIN.RNN_GRAD_CLIP)
+| epoch   0 |     0/  184 batches | ms/batch 12.15 | s_loss  0.02  0.02 | w_loss  0.03  0.02
+-----------------------------------------------------------------------------------------
+| end epoch   0 | valid loss  6.57  6.44 | lr 0.00200|
+-----------------------------------------------------------------------------------------
+Save G/Ds models.
+| epoch   1 |     0/  184 batches | ms/batch  3.35 | s_loss  0.02  0.02 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   1 | valid loss  6.24  5.92 | lr 0.00196|
+-----------------------------------------------------------------------------------------
+| epoch   2 |     0/  184 batches | ms/batch  3.20 | s_loss  0.02  0.02 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   2 | valid loss  5.94  5.59 | lr 0.00192|
+-----------------------------------------------------------------------------------------
+| epoch   3 |     0/  184 batches | ms/batch  3.45 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   3 | valid loss  5.84  5.33 | lr 0.00188|
+-----------------------------------------------------------------------------------------
+| epoch   4 |     0/  184 batches | ms/batch  3.15 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   4 | valid loss  5.78  5.25 | lr 0.00184|
+-----------------------------------------------------------------------------------------
+| epoch   5 |     0/  184 batches | ms/batch  3.58 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   5 | valid loss  5.63  5.12 | lr 0.00181|
+-----------------------------------------------------------------------------------------
+| epoch   6 |     0/  184 batches | ms/batch  3.51 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   6 | valid loss  5.54  4.90 | lr 0.00177|
+-----------------------------------------------------------------------------------------
+| epoch   7 |     0/  184 batches | ms/batch  3.69 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   7 | valid loss  5.53  4.94 | lr 0.00174|
+-----------------------------------------------------------------------------------------
+| epoch   8 |     0/  184 batches | ms/batch  3.57 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   8 | valid loss  5.46  4.84 | lr 0.00170|
+-----------------------------------------------------------------------------------------
+| epoch   9 |     0/  184 batches | ms/batch  3.57 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch   9 | valid loss  5.52  4.88 | lr 0.00167|
+-----------------------------------------------------------------------------------------
+| epoch  10 |     0/  184 batches | ms/batch  3.38 | s_loss  0.01  0.01 | w_loss  0.01  0.01
+-----------------------------------------------------------------------------------------
+| end epoch  10 | valid loss  5.36  4.78 | lr 0.00163|
+-----------------------------------------------------------------------------------------
+| epoch  11 |     0/  184 batches | ms/batch  3.48 | s_loss  0.01  0.01 | w_loss  0.01  0.01
